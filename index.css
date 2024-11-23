@@ -10,25 +10,49 @@ body {
     width: 100%;
     color: white;
     overflow-x: hidden;
+    background-color: #111315;
+    /* Prevent horizontal scrolling */
+}
+
+.menu,
+.poster {
+    background-color: #111315;
+
 }
 
 .main_container {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    /* Ensure full viewport height */
     display: flex;
     background-color: #111315;
 }
 
 .left_container {
     height: 100%;
+    /* Full height of the viewport */
     width: 25%;
+    background-color: black;
+    overflow-y: auto;
+    /* Allow scrolling if content overflows */
+    position: sticky;
+    top: 0;
+    /* Stick to the top while scrolling */
     line-height: 24px;
-    padding: 20px;
+
+}
+
+.left_container::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, and newer versions of Edge */
+}
+
+.main_container_items::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, and newer versions of Edge */
 }
 
 .image_container {
     text-align: center;
-    background-color: black;
     padding-top: 40px;
 }
 
@@ -50,12 +74,7 @@ h3 {
     text-align: center;
 }
 
-.list1_container {
-    margin-top: 2px;
-    padding: 0px 20px;
-    background-color: black;
-}
-
+.list1_container,
 .list2_container {
     margin-top: 2px;
     padding: 0px 20px;
@@ -73,20 +92,27 @@ ol li {
 }
 
 .right_container {
+    flex: 1;
+    /* Take remaining width */
     height: 100%;
-    width: 75%;
-    background-color: #111315;
-    padding: 20px;
+    /* Full height */
+    background: rgba(25, 29, 32, 1);
+    display: flex;
+    flex-direction: column;
+    /* Stack elements (nav + content) */
 }
 
 nav {
     background: rgba(25, 29, 32, 1);
-    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .nav {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .nav input {
@@ -116,65 +142,86 @@ i {
 .btn {
     background: rgba(255, 36, 36, 1);
     border-radius: 5px;
-    padding: 8px 50px;
-    margin: 5px;
+    padding: 8px 20px;
     color: rgba(245, 245, 245, 1);
     border: none;
     cursor: pointer;
+    margin-left: 10px;
+}
+
+.poster {
+    /* margin: 10px 0; */
+    margin-top: 10px;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    /* Ensure image doesn't overflow */
 }
 
 .poster img {
+    margin-top: 15px;
     width: 98%;
+    height: 90%;
+    /* object-fit: cover; */
     margin: 10px;
-    height: 350px;
 }
 
 .menu {
-    padding-left: 20px;
+    padding: 10px;
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .main_container_items {
+    height: 100%;
+    flex: 1;
+    /* Take available height for scrolling */
+    overflow-y: auto;
+    /* Enable scrolling for items */
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    /* Adds space between cards */
-    padding: 20px;
-    justify-content: flex-start;
-    /* Aligns the cards to the left */
+    /* Space between cards */
+    justify-content: space-between;
+    /* Align cards to the left */
+    background-color: #111315;
+    /* Matches theme */
 }
 
 .card {
-    background: rgb(22, 137, 225);
+    height: 320px;
     width: calc(33.333% - 20px);
+    /* Three cards per row with spacing */
+    background: rgba(39, 42, 48, 1);
     border-radius: 10px;
-    /* overflow: hidden; */
+    padding: 10px;
     box-sizing: border-box;
-    margin-bottom: 20px;
-    display:flex;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.item_img  {
-    object-fit: cover;
+.item_img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item_img img {
     width: 100%;
-    height: 180px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 .card_details {
-    padding: 10px;
     display: flex;
-    flex-direction: row;
-    /* gap: 140px; */
-    /* justify-content: space-between; */
-}
-
-.card_content {
-    margin-bottom: 10px;
-    /* position: absolute; */
-    
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
 }
 
 .item_desc {
@@ -187,13 +234,13 @@ i {
     color: #bbb;
 }
 
-.plus img{
-    height: 20px;
+.add_to_cart {
+    background-color: #363A43;
+    color: #878787;
+    border-radius: 5px;
+    font-weight: 400;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
     cursor: pointer;
-}
-
-.plus_image {
-   padding: 20px;
-   /* margin-left: 140px; */
-   text-align: left;
 }
