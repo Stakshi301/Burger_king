@@ -18,7 +18,11 @@ body {
     display: flex;
     /* justify-content: space-between; */
     /* background-color: green; */
+<<<<<<< HEAD
     background-color: black;
+=======
+background-color: 111315;
+>>>>>>> 8f66d17 (Your commit message here)
 }
 
 .left_container {
@@ -26,19 +30,23 @@ body {
     width: 20%;
     padding: 19px 36px;
     line-height: 24px;
-    /* background-color: red; */
-    background-color: black;
 }
 
 .right_container {
     height: 100%;
+<<<<<<< HEAD
     width: 80%;
     /* background-color: blue; */
+=======
+    width: 72%;
+>>>>>>> 8f66d17 (Your commit message here)
     background-color: #111315;
 }
 
 .image_container {
     text-align: center;
+    background-color: black;
+    /* background-color: aqua; */
 }
 
 .image_container img {
@@ -52,9 +60,28 @@ body {
 
 .image_container h4 {
     color: red;
-    margin-bottom: 20px;
 }
 
+<<<<<<< HEAD
 h3 {
     text-align: center;
 }
+=======
+h3{
+text-align: center;
+}
+
+.list1_container{
+    margin-top: 2px;
+    padding: 0px 20px;
+    background-color: black;
+/* background-color: blueviolet; */
+}
+
+.list2_container{
+    margin-top: 2px;
+    padding: 0px 20px;
+    background-color: black;
+    /* background-color: yellow; */
+}
+>>>>>>> 8f66d17 (Your commit message here)
