@@ -9,49 +9,31 @@ body {
     height: 100%;
     width: 100%;
     color: white;
+    overflow-x: hidden;
 }
 
 .main_container {
     height: 100%;
     width: 100%;
-    padding: 10px;
     display: flex;
-    /* justify-content: space-between; */
-    /* background-color: green; */
-<<<<<<< HEAD
-    background-color: black;
-=======
-background-color: 111315;
->>>>>>> 8f66d17 (Your commit message here)
+    background-color: #111315;
 }
 
 .left_container {
     height: 100%;
-    width: 20%;
-    padding: 19px 36px;
+    width: 25%;
     line-height: 24px;
-}
-
-.right_container {
-    height: 100%;
-<<<<<<< HEAD
-    width: 80%;
-    /* background-color: blue; */
-=======
-    width: 72%;
->>>>>>> 8f66d17 (Your commit message here)
-    background-color: #111315;
+    padding: 20px;
 }
 
 .image_container {
     text-align: center;
     background-color: black;
-    /* background-color: aqua; */
+    padding-top: 40px;
 }
 
 .image_container img {
-    height: 150px;
-    width: 180px;
+    height: 200px;
 }
 
 .image_container h3 {
@@ -60,28 +42,148 @@ background-color: 111315;
 
 .image_container h4 {
     color: red;
+    padding-bottom: 10px;
 }
 
-<<<<<<< HEAD
 h3 {
+    padding: 10px;
     text-align: center;
 }
-=======
-h3{
-text-align: center;
-}
 
-.list1_container{
+.list1_container {
     margin-top: 2px;
     padding: 0px 20px;
     background-color: black;
-/* background-color: blueviolet; */
 }
 
-.list2_container{
+.list2_container {
     margin-top: 2px;
     padding: 0px 20px;
     background-color: black;
-    /* background-color: yellow; */
+    padding-bottom: 30px;
 }
->>>>>>> 8f66d17 (Your commit message here)
+
+ol {
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+ol li {
+    padding: 1px;
+}
+
+.right_container {
+    height: 100%;
+    width: 75%;
+    background-color: #111315;
+    padding: 20px;
+}
+
+nav {
+    background: rgba(25, 29, 32, 1);
+    padding-left: 10px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav input {
+    width: 75%;
+    padding: 8px;
+    margin: 5px;
+    background: rgba(39, 42, 48, 1);
+    border-radius: 5px;
+    border: none;
+}
+
+i {
+    position: relative;
+    left: 30px;
+    align-content: center;
+    top: -1px;
+    color: rgba(135, 135, 135, 1);
+}
+
+::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    padding-left: 25px;
+    align-content: center;
+}
+
+.btn {
+    background: rgba(255, 36, 36, 1);
+    border-radius: 5px;
+    padding: 8px 50px;
+    margin: 5px;
+    color: rgba(245, 245, 245, 1);
+    border: none;
+    cursor: pointer;
+}
+
+.poster img {
+    width: 98%;
+    margin: 10px;
+    height: 350px;
+}
+
+.menu {
+    padding-left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.main_container_items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* Adds space between cards */
+    padding: 20px;
+    justify-content: flex-start;
+    /* Aligns the cards to the left */
+}
+
+.card {
+    background: rgba(25, 29, 32, 1);
+    width: calc(33.333% - 20px);
+    /* Adjust the width of each card */
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.card img {
+    object-fit: cover;
+    /* Ensures images cover the area properly */
+    width: 100%;
+    height: 180px;
+    /* Fixed height for images */
+}
+
+.card_details {
+    padding: 10px;
+}
+
+.card_content {
+    margin-bottom: 10px;
+}
+
+.item_desc {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.item_price {
+    font-size: 14px;
+    color: #bbb;
+}
+
+.plus img {
+    height: 20px;
+    /* Adjust the size of the icon */
+    cursor: pointer;
+}
